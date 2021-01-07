@@ -1,0 +1,151 @@
+<section id="rental-car">
+  <div class="row">
+      <div class="container">
+          <div class="card">
+              <div class="card-header">
+                  <h4 class="card-title" translate>User Details</h4>
+              </div>
+              <div class="card-content">
+                  <div class="card-body">
+                      <form [formGroup]="userDetailsForm" (ngSubmit)="onSubmit()">
+                          <div class="form-group">
+                              <div class="row">
+                                  <div class='col-12 col-sm-2'>
+                                      <div class="form-group">
+                                          <label class="text" for="service" translate>Name
+                                              <span>:</span> </label>
+                                      </div>
+                                  </div>
+                                  <div class='col-12 col-sm-3'>
+                                    <input formControlName="name" class="form-control mb-2"
+                                        placeholder="Ex. Seema">
+                                    <div *ngIf="cpf.name.touched && cpf.name.errors?.required"
+                                        class="help-block text-danger">
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i><span
+                                            translate>name required</span>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                  <div class='col-12 col-sm-2'>
+                                      <div class="form-group">
+                                          <label class="text" for="name" translate>email
+                                          </label>
+                                      </div>
+                                  </div>
+                                  <div class='col-12 col-sm-3'>
+                                      <input formControlName="email" class="form-control mb-2"
+                                          placeholder="Ex. s@gmail.com">
+                                      <div *ngIf="cpf.email.touched && cpf.email.errors?.required"
+                                          class="help-block text-danger">
+                                          <i class="fa fa-exclamation-circle" aria-hidden="true"></i><span
+                                              translate>email required</span>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <div class="row">
+                                  <div class='col-12 col-sm-2'>
+                                      <div class="form-group">
+                                          <label class="text" for="contact" translate>Contact
+                                          </label>
+                                      </div>
+                                  </div>
+                                  <div class='col-12 col-sm-3'>
+                                      <input formControlName="contact" class="form-control mb-2"
+                                          placeholder="0167..">
+                                      <div *ngIf="cpf.contact.touched && cpf.contact.errors?.required"
+                                          class="help-block text-danger">
+                                          <i class="fa fa-exclamation-circle" aria-hidden="true"></i><span
+                                              translate>contact number required</span>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <div class="row">
+                                <div class='col-12 col-sm-2'>
+                                    <div class="form-group">
+                                        <label class="text" for="address" translate>Address
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class='col-12 col-sm-3'>
+                                    <input formControlName="address" class="form-control mb-2"
+                                        placeholder="address">
+                                    <div *ngIf="cpf.address.touched && cpf.address.errors?.required"
+                                        class="help-block text-danger">
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i><span
+                                            translate>address required</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class='col-12 col-sm-2'>
+                                    <div class="form-group">
+                                        <label class="text" for="state" translate>State
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class='col-12 col-sm-3'>
+                                    <input formControlName="state" class="form-control mb-2"
+                                        placeholder="state">
+                                    <div *ngIf="cpf.state.touched && cpf.state.errors?.required"
+                                        class="help-block text-danger">
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i><span
+                                            translate>state required</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                              <div class='col-12 col-sm-2'>
+                                  <div class="form-group">
+                                      <label class="text" for="pincode" translate>Pincode
+                                      </label>
+                                  </div>
+                              </div>
+                              <div class='col-12 col-sm-3'>
+                                  <input formControlName="pincode" class="form-control mb-2"
+                                      placeholder="pincode">
+                                  <div *ngIf="cpf.pincode.touched && cpf.pincode.errors?.required"
+                                      class="help-block text-danger">
+                                      <i class="fa fa-exclamation-circle" aria-hidden="true"></i><span
+                                          translate>pincode required</span>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <div class="row">
+                              <div class='col-12 col-sm-2'>
+                                  <div class="form-group">
+                                      <label class="text" for="upi" translate>UPICode
+                                      </label>
+                                  </div>
+                              </div>
+                              <div class='col-12 col-sm-3'>
+                                  <input formControlName="upi" class="form-control mb-2"
+                                      placeholder="upi">
+                                  <div *ngIf="cpf.upi.touched && cpf.upi.errors?.required"
+                                      class="help-block text-danger">
+                                      <i class="fa fa-exclamation-circle" aria-hidden="true"></i><span
+                                          translate>upi required</span>
+                                  </div>
+                              </div>
+                          </div>
+                              <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
+                                  <button type="submit" class="btn btn-success mr-sm-2 mb-1"
+                                      [disabled]="!userDetailsForm.valid" translate>Submit</button>
+                                  <a [routerLink]="['/checkout']" class="btn btn-secondary mb-1"
+                                      translate>lblCancel</a>
+                              </div>
+
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+</section>
