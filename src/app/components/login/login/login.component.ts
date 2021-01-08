@@ -18,7 +18,6 @@ export class LoginComponent implements OnInit {
     }  
   }  
   ngOnInit(): void {
-    debugger
     if (this._auth.loggedIn) {  
       this._auth.logout();  
     }
