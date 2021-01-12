@@ -11,7 +11,6 @@ export class LoginComponent implements OnInit {
 
   username: string;  
   password: string;  
-  title = 'auth-guard-demo';  
   constructor(private _auth: AuthenticationService, private _router: Router) {  
     if (this._auth.loggedIn) {  
       this._router.navigate(['home']);  

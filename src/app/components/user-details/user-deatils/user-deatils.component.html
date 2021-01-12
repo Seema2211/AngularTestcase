@@ -18,11 +18,11 @@
                                   </div>
                                   <div class='col-12 col-sm-3'>
                                     <input formControlName="name" class="form-control mb-2"
-                                        placeholder="Ex. Seema">
+                                        placeholder="Ex. Seema" name="name">
                                     <div *ngIf="cpf.name.touched && cpf.name.errors?.required"
                                         class="help-block text-danger">
                                         <i class="fa fa-exclamation-circle" aria-hidden="true"></i><span
-                                            translate>name required</span>
+                                            translate class="name">name required</span>
                                     </div>
                                 </div>
                               </div>
@@ -35,11 +35,11 @@
                                   </div>
                                   <div class='col-12 col-sm-3'>
                                       <input formControlName="email" class="form-control mb-2"
-                                          placeholder="Ex. s@gmail.com">
+                                          placeholder="Ex. s@gmail.com" name="email">
                                       <div *ngIf="cpf.email.touched && cpf.email.errors?.required"
                                           class="help-block text-danger">
                                           <i class="fa fa-exclamation-circle" aria-hidden="true"></i><span
-                                              translate>email required</span>
+                                              translate class="email">email required</span>
                                       </div>
                                   </div>
                               </div>
@@ -53,11 +53,11 @@
                                   </div>
                                   <div class='col-12 col-sm-3'>
                                       <input formControlName="contact" class="form-control mb-2"
-                                          placeholder="0167..">
+                                          placeholder="0167.." name="contact">
                                       <div *ngIf="cpf.contact.touched && cpf.contact.errors?.required"
                                           class="help-block text-danger">
                                           <i class="fa fa-exclamation-circle" aria-hidden="true"></i><span
-                                              translate>contact number required</span>
+                                              translate class="contact">contact number required</span>
                                       </div>
                                   </div>
                               </div>
@@ -71,11 +71,11 @@
                                 </div>
                                 <div class='col-12 col-sm-3'>
                                     <input formControlName="address" class="form-control mb-2"
-                                        placeholder="address">
+                                        placeholder="address" name="address">
                                     <div *ngIf="cpf.address.touched && cpf.address.errors?.required"
                                         class="help-block text-danger">
                                         <i class="fa fa-exclamation-circle" aria-hidden="true"></i><span
-                                            translate>address required</span>
+                                            translate class="add">address required</span>
                                     </div>
                                 </div>
                             </div>
@@ -89,11 +89,11 @@
                                 </div>
                                 <div class='col-12 col-sm-3'>
                                     <input formControlName="state" class="form-control mb-2"
-                                        placeholder="state">
+                                        placeholder="state" name="state">
                                     <div *ngIf="cpf.state.touched && cpf.state.errors?.required"
                                         class="help-block text-danger">
                                         <i class="fa fa-exclamation-circle" aria-hidden="true"></i><span
-                                            translate>state required</span>
+                                            translate class="state">state required</span>
                                     </div>
                                 </div>
                             </div>
@@ -107,11 +107,11 @@
                               </div>
                               <div class='col-12 col-sm-3'>
                                   <input formControlName="pincode" class="form-control mb-2"
-                                      placeholder="pincode">
+                                      placeholder="pincode" name="pincode">
                                   <div *ngIf="cpf.pincode.touched && cpf.pincode.errors?.required"
                                       class="help-block text-danger">
                                       <i class="fa fa-exclamation-circle" aria-hidden="true"></i><span
-                                          translate>pincode required</span>
+                                          translate class="pin">pincode required</span>
                                   </div>
                               </div>
                           </div>
@@ -125,11 +125,11 @@
                               </div>
                               <div class='col-12 col-sm-3'>
                                   <input formControlName="upi" class="form-control mb-2"
-                                      placeholder="upi">
+                                      placeholder="upi" name="upi">
                                   <div *ngIf="cpf.upi.touched && cpf.upi.errors?.required"
                                       class="help-block text-danger">
                                       <i class="fa fa-exclamation-circle" aria-hidden="true"></i><span
-                                          translate>upi required</span>
+                                          translate class="upi">upi required</span>
                                   </div>
                               </div>
                           </div>
@@ -137,7 +137,7 @@
                                   <button type="submit" class="btn btn-success mr-sm-2 mb-1"
                                       [disabled]="!userDetailsForm.valid" translate>Submit</button>
                                   <a [routerLink]="['/checkout']" class="btn btn-secondary mb-1"
-                                      translate>lblCancel</a>
+                                      translate>Cancel</a>
                               </div>
 
                           </div>
